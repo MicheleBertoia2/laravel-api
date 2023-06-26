@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [ProjectController::class, 'index']);
 
-Route::get('/', [ProjectController::class, 'index'])->prefix('projects')->name('projects');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
