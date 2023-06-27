@@ -21,3 +21,11 @@ Creiamo un nuovo componente ProjectCard, che corrisponde ad una card per visuali
 **Bonus:**
 1. Gestire la paginazione dei risultati
 2. ‘Innestare’ vue all’interno del progetto Laravel e da lì fare la chiamata API
+
+## day 2
+
+Aggiungete il router a Vue e inserite  un menu di navigazione fra le pagine.
+Solo una delle pagine farà la chiamata axios per stampare il portfolio.
+Aggiungete un elenco di  bottoni per i tipi  e le tecnologie, Questi bottoni verranno stampati a seguito di chiamate axios dedicate.
+BONUS
+al click di un bottone per il tipo o  tecnologie, nell’elenco dei progetti appariranno solo quelli di quel tipo o di quella tecnologia
