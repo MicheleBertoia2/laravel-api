@@ -11,8 +11,7 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index(){
-        // $projects = Project::with('types', 'technologies')->all();
-        $projects = Project::all();
+        $projects = Project::with('type', 'technologies')->get();
         return response()->json($projects);
     }
 
@@ -24,5 +23,15 @@ class ProjectController extends Controller
     public function getTechnologies(){
         $technologies = Technology::all();
         return response()->json($technologies);
+    }
+
+    public function getProjectsTechnology($id){
+        $projects = Project::where('technology_id', $id);
+        return response()->json($projects);
+    }
+
+    public function getProjectsType($id){
+        $projects = Project::where('type_id', $id);
+        return response()->json($projects);
     }
 }
