@@ -38,9 +38,16 @@ class LeadController extends Controller
 
         }
 
-        // $new_lead = Lead::create($val_data);
+        $new_lead = new Lead();
+        $new_lead->fill($data);
+        $new_lead->save();
+
         $success = true;
         return response()->json(compact('success'));
+
+        // hello@example-mailtrap.com
+
+        Mail::to('hello@example-mailtrap.com')->send(new NewContact($new_lead));
 
     }
 }
